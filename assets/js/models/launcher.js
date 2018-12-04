@@ -13,7 +13,8 @@ function Launcher (ctx) {
     this.imgGrua.src = "assets/img/ganchogrua.png";
     
     this.angle = 0;
-    this.angleStep = Math.PI / 128;
+    this.den = 128;
+    this.angleStep = Math.PI / this.den; //128
 
     this.vx = -3;
     // this.setListeners();
@@ -59,6 +60,10 @@ Launcher.prototype.move = function (time) {
         this.angleStep *= -1;
         this.vx *= -1;
     }
+}
+
+Launcher.prototype.increaseSpeed = function () {
+   this.den = 50;
 }
 
 

@@ -13,6 +13,7 @@ function Game (canvasElement) {
     this.boxes = [];
 
     this.counter = 0;
+
 }
 
 Game.prototype.setListeners = function () {
@@ -33,6 +34,8 @@ Game.prototype.onKeyDown = function (event) {
         }
         this.counter++;
         this.counterAdd();
+
+        this.increaseSpeedIf();
         
     }
 }
@@ -58,7 +61,7 @@ Game.prototype.drawAll = function () {
 }
 
 Game.prototype.moveAll = function () {
-    // this.bg.move();
+    this.bg.move2();
     this.launcher.move();
     if(this.boxes.length <= 1 && this.boxes != "") {
         this.boxes[this.boxes.length - 1].move2();
@@ -116,3 +119,9 @@ Game.prototype.counterAdd = function () {
     counter.innerText = this.counter;
 }
 
+Game.prototype.increaseSpeedIf = function () {
+    if(this.boxes.length > 2) {
+        console.log(this.launcher.den);
+        this.launcher.increaseSpeed();
+    }
+}
