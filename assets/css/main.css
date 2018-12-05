@@ -46,5 +46,6 @@ body {
 
 .start-button {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    border: none;
 }
