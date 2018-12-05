@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 html {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .info {
@@ -18,3 +20,15 @@ body {
     border: 1px solid green;
 }
 
+#counter-text {
+    font-family: "Roboto";
+}
+
+.start-pannel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 600px;
+    background: red;
+}

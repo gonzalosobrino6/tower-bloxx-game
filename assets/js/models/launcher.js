@@ -13,8 +13,8 @@ function Launcher (ctx) {
     this.imgGrua.src = "assets/img/ganchogrua.png";
     
     this.angle = 0;
-    this.den = 128;
-    this.angleStep = Math.PI / this.den; //128
+    this.d = 128;
+    this.angleStep = Math.PI / this.d; //128
 
     this.vx = -3;
     // this.setListeners();
@@ -49,12 +49,10 @@ Launcher.prototype.draw = function () {
 }
 
 
-
-
-
 Launcher.prototype.move = function (time) {
+    this.angleStep = this.angleStep >= 0 ? Math.PI / this.d : - Math.PI / this.d;
     this.x += this.vx;
-    this.angle += this.angleStep
+    this.angle += this.angleStep;
 
     if (Math.abs(this.angle) >= Math.PI / 4) {
         this.angleStep *= -1;
@@ -63,7 +61,9 @@ Launcher.prototype.move = function (time) {
 }
 
 Launcher.prototype.increaseSpeed = function () {
-   this.den = 50;
+    if (this.d > 40) {
+        this.d -= 10;
+    }
 }
 
 
