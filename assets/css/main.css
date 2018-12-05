@@ -24,11 +24,21 @@ body {
     font-family: "Roboto";
 }
 
-.start-pannel {
+#start-pannel {
     position: absolute;
     top: 0;
     left: 0;
-    width: 500px;
-    height: 600px;
-    background: red;
+    background-image: url("/Users/gonzalosobrino/Documents/Ironhack/Projects/module-1-game/assets/img/citybackground.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    display: flex;
+    justify-content: center
+}
+
+.hide {
+    display: none;
 }

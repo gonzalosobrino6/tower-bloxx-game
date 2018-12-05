@@ -8,15 +8,29 @@ function Game(canvasElement) {
   this.launcher = new Launcher(this.ctx);
   this.bloxx = undefined;
 
-  this.setListeners();
 
   this.boxes = [];
   this.counter = 0;
   this.currentBoxesInc = 0;
+
+  this.startBtn = document.getElementById('start-button');
+  this.startPannel = document.getElementById('start-pannel');
+  this.startPannel.style.width = window.innerWidth + 'px';
+  this.startPannel.style.height = window.innerHeight + 'px';
+
+  this.setListeners();
 }
+
 
 Game.prototype.setListeners = function() {
   document.onkeydown = this.onKeyDown.bind(this);
+  this.startBtn.addEventListener('click', this.onClickStartBtn.bind(this))
+};
+
+Game.prototype.onClickStartBtn = function(event) {
+    this.bg.draw();
+    this.startPannel.classList.add('hide');
+    this.start();
 };
 
 Game.prototype.onKeyDown = function(event) {
