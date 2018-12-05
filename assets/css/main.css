@@ -13,7 +13,8 @@ body {
 
 .info {
     background-color: rgb(94, 144, 255);
-    position: fixed;
+    position: absolute;
+    z-index: 2;
 }
 
 #main-canvas {
@@ -41,4 +42,9 @@ body {
 
 .hide {
     display: none;
+}
+
+.start-button {
+    display: flex;
+    justify-content: center;
 }
