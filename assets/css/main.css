@@ -46,6 +46,33 @@ body {
 
 .start-button {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     border: none;
+}
+
+#start-button {
+    width: 200px;
+    background-color:#b8e356;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #83c41a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #86ae47;
+}
+
+#start-button:hover {
+    background-color:#f24437;
+    color:#ededed;
+    border:1px solid #f24437;
+}
+#start-button:active {
+	position:relative;
+	top:1px;
 }
